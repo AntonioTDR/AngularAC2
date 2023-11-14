@@ -1,0 +1,24 @@
+<form #formulario="ngForm" (ngSubmit)="salvar()">
+    <div>
+      <label for="ra">RA:</label>
+      <input type="text" name="ra" [(ngModel)]="ra" required>
+    </div>
+  
+    <div>
+      <label for="nome">Nome:</label>
+      <input type="text" name="nome" [(ngModel)]="nome" required>
+    </div>
+  
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" name="email" [(ngModel)]="email" required>
+    </div>
+  
+    <div>
+      <label for="celular">Celular:</label>
+      <input type="text" name="celular" [(ngModel)]="celular" required>
+    </div>
+  
+    <button type="submit" [disabled]="!formulario.valid">Salvar</button>
+  </form>
+  
